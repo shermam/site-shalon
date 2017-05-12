@@ -1,0 +1,24 @@
+{
+  "name": "site-shalon",
+  "version": "1.0.0",
+  "description": "Shalon Stationary Store WebSite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shermam/site-shalon.git"
+  },
+  "keywords": [
+    "Stationary",
+    "Store",
+    "Website"
+  ],
+  "author": "Shermam Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shermam/site-shalon/issues"
+  },
+  "homepage": "https://github.com/shermam/site-shalon#readme"
+}
