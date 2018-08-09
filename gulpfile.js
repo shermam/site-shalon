@@ -8,13 +8,13 @@ gulp.task('default', ['build', 'serve']);
 //Serves the dist folder
 gulp.task('serve', function () {
 	gulp.src('dist')
-		.pipe(server({open:true}));
+		.pipe(server({ open: true }));
 })
 
 //Task to build the project
 gulp.task('build', function () {
-	
+
 	//TODO - clean build
-	gulp.src('src/**/*')
+	gulp.src('old/**/*')
 		.pipe(gulp.dest('dist'));
 });
