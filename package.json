@@ -23,6 +23,7 @@
   "homepage": "https://github.com/shermam/site-shalon#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-image-resize": "^0.13.0",
     "gulp-webserver": "^0.9.1"
   }
 }
