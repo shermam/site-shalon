@@ -1,1027 +1,1027 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-  <head>
-    <title>Papelaria Shalon</title>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="Papelaria Shalon_files/layout.css"
-          rel="preload"
-          type="text/css"
-          media="all"
-          onload="this.rel = 'stylesheet'"
-          as="style">
+<head>
+  <title>Papelaria Shalon</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="css/layout.css"
+        rel="preload"
+        onload="document.body.onload = _ => this.rel='stylesheet'"
+        as="style">
 
-    <style>
-      html {
-        overflow-y: scroll;
-        overflow-x: hidden;
-      }
+  <style>
+    html {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
 
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        font-size: 14px;
-        line-height: 1.6em;
-      }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.6em;
+    }
 
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-      .center {
-        text-align: center;
-      }
+    .center {
+      text-align: center;
+    }
 
-      .nospace {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
+    .nospace {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-      .inline * {
-        display: inline-block;
-      }
+    .inline * {
+      display: inline-block;
+    }
 
-      .inline *:last-child {
-        margin-right: 0;
-      }
+    .inline *:last-child {
+      margin-right: 0;
+    }
 
-      .pushright li {
-        margin-right: 20px;
-      }
+    .pushright li {
+      margin-right: 20px;
+    }
 
-      .pushright li:last-child {
-        margin-right: 0;
-      }
+    .pushright li:last-child {
+      margin-right: 0;
+    }
 
-      .borderedbox {
-        border: 1px solid;
-      }
+    .borderedbox {
+      border: 1px solid;
+    }
 
-      .overlay {
-        position: relative;
-        z-index: 1;
-      }
+    .overlay {
+      position: relative;
+      z-index: 1;
+    }
 
-      .overlay::after {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: "";
-        z-index: -1;
-      }
+    .overlay::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      z-index: -1;
+    }
 
-      .bgded {
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+    .bgded {
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-      .btn {
-        display: inline-block;
-        padding: 15px 25px 17px;
-        text-transform: uppercase;
-        border: 1px solid;
-      }
+    .btn {
+      display: inline-block;
+      padding: 15px 25px 17px;
+      text-transform: uppercase;
+      border: 1px solid;
+    }
 
-      .btn.medium {
-        padding: 10px 20px 12px;
-      }
+    .btn.medium {
+      padding: 10px 20px 12px;
+    }
 
-      .clear,
-      .group {
-        display: block;
-      }
+    .clear,
+    .group {
+      display: block;
+    }
 
-      .clear::before,
-      .clear::after,
-      .group::before,
-      .group::after {
-        display: table;
-        content: "";
-      }
+    .clear::before,
+    .clear::after,
+    .group::before,
+    .group::after {
+      display: table;
+      content: "";
+    }
 
-      .clear,
-      .clear::after,
-      .group,
-      .group::after {
-        clear: both;
-      }
+    .clear,
+    .clear::after,
+    .group,
+    .group::after {
+      clear: both;
+    }
 
-      a {
-        outline: none;
-        text-decoration: none;
-      }
+    a {
+      outline: none;
+      text-decoration: none;
+    }
 
-      .fl_left,
-      .imgl {
-        float: left;
-      }
+    .fl_left,
+    .imgl {
+      float: left;
+    }
 
-      .fl_right,
-      .imgr {
-        float: right;
-      }
+    .fl_right,
+    .imgr {
+      float: right;
+    }
 
-      img {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        border: none;
-        line-height: normal;
-        vertical-align: middle;
-      }
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+      line-height: normal;
+      vertical-align: middle;
+    }
 
-      body,
-      input,
-      textarea,
-      select {
-        font-family: Verdana, Geneva, sans-serif;
-      }
+    body,
+    input,
+    textarea,
+    select {
+      font-family: Verdana, Geneva, sans-serif;
+    }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      .heading {
-        font-family: Georgia, "Times New Roman", Times, serif;
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .heading {
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
 
-      form,
-      fieldset,
-      legend {
-        margin: 0;
-        padding: 0;
-        border: none;
-      }
+    form,
+    fieldset,
+    legend {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
 
-      label,
-      input,
-      textarea,
-      select,
-      button {
-        display: block;
-        resize: none;
-        outline: none;
-        color: inherit;
-        font-size: inherit;
-        font-family: inherit;
-        vertical-align: middle;
-      }
+    label,
+    input,
+    textarea,
+    select,
+    button {
+      display: block;
+      resize: none;
+      outline: none;
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      vertical-align: middle;
+    }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      .heading {
-        margin: 0 0 20px 0;
-        font-size: 22px;
-        line-height: normal;
-        font-weight: normal;
-        text-transform: uppercase;
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .heading {
+      margin: 0 0 20px 0;
+      font-size: 22px;
+      line-height: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
 
-      address {
-        font-style: normal;
-        font-weight: normal;
-      }
+    address {
+      font-style: normal;
+      font-weight: normal;
+    }
 
-      .font-x1 {
-        font-size: 1.2rem;
-      }
+    .font-x1 {
+      font-size: 1.2rem;
+    }
 
-      .wrapper {
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-        word-wrap: break-word;
-      }
+    .wrapper {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      word-wrap: break-word;
+    }
 
 
+    .hoc {
+      display: block;
+      margin: 0 auto;
+    }
+
+    address,
+    article,
+    aside,
+    figcaption,
+    figure,
+    footer,
+    header,
+    main,
+    nav,
+    section {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .one_half,
+    .one_third,
+    .two_third,
+    .one_quarter,
+    .two_quarter,
+    .three_quarter {
+      display: inline-block;
+      float: left;
+      margin: 0 0 0 3.06748466257669%;
+      list-style: none;
+    }
+
+    .first {
+      margin-left: 0;
+      clear: left;
+    }
+
+    .one_third {
+      width: 31.28834355828221%;
+    }
+
+    .one_half,
+    .two_quarter {
+      width: 48.46625766871166%;
+    }
+
+    .btmspace-30 {
+      margin-bottom: 30px;
+    }
+
+    .btmspace-50 {
+      margin-bottom: 50px;
+    }
+
+    .inspace-10 {
+      padding: 10px;
+    }
+
+    .row0 {
+      border-top: 1px solid;
+    }
+
+    #topbar {
+      padding: 15px 0;
+      font-size: .8rem;
+      text-transform: uppercase;
+    }
+
+    #topbar * {
+      margin: 0;
+    }
+
+    #topbar ul li {
+      display: inline-block;
+      margin-right: 10px;
+      padding-right: 15px;
+      border-right: 1px solid;
+    }
+
+    #topbar ul li:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+    }
+
+    #topbar i {
+      margin: 0 5px 0 0;
+      line-height: normal;
+    }
+
+    #header #logo {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    #header #logo * {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    #header #logo h1 {
+      font-size: 32px;
+      font-variant: small-caps;
+    }
+
+    #pageintro {
+      padding: 150px 0;
+    }
+
+    #pageintro article div {
+      margin-bottom: 80px;
+    }
+
+    #pageintro article div * {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    #pageintro article div .heading {
+      margin-bottom: 50px;
+      font-size: 40px;
+    }
+
+    #pageintro article div p:first-of-type {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .container {
+      padding: 80px 0;
+    }
+
+    .sectiontitle {
+      display: block;
+      max-width: 55%;
+      margin: 0 auto 80px;
+      text-align: center;
+    }
+
+    .sectiontitle * {
+      margin: 0;
+    }
+
+    .cta article {
+      display: block;
+      position: relative;
+      padding: 0 0 0 95px;
+      line-height: normal;
+    }
+
+    .cta article * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .cta article i {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 85px;
+      overflow: hidden;
+      line-height: 1;
+      font-size: 65px;
+    }
+
+    .cta article .heading {
+      margin-bottom: 10px;
+    }
+
+    .services article {
+      display: block;
+      padding: 30px;
+      padding-top: 150px;
+    }
+
+    .services article * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .services article .heading {
+      margin-bottom: 10px;
+    }
+
+    #footer {
+      padding: 80px 0;
+    }
+
+    #footer .heading {
+      margin-bottom: 50px;
+      font-size: 1.2rem;
+    }
+
+    #footer .linklist li {
+      display: block;
+      margin-bottom: 15px;
+      padding: 0 0 15px 0;
+      border-bottom: 1px solid;
+    }
+
+    #footer .linklist li:last-child {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    #footer .linklist li::before,
+    #footer .linklist li::after {
+      display: table;
+      content: "";
+    }
+
+    #footer .linklist li,
+    #footer .linklist li::after {
+      clear: both;
+    }
+
+    #footer .contact.linklist li,
+    #footer .contact.linklist li:last-child {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    #footer .contact li * {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    #footer .contact li i {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    #copyright {
+      padding: 20px 0;
+    }
+
+    #copyright * {
+      margin: 0;
+      padding: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition: all .3s ease-in-out;
+    }
+
+    #mainav form * {
+      transition: none !important;
+    }
+
+    nav ul,
+    nav ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #mainav,
+    #breadcrumb,
+    .sidebar nav {
+      line-height: normal;
+    }
+
+    #mainav ul.clear {
+      margin-top: 3px;
+    }
+
+    #mainav ul {
+      text-transform: uppercase;
+    }
+
+    #mainav form {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #mainav form select,
+    #mainav form select option {
+      display: block;
+      cursor: pointer;
+      outline: none;
+    }
+
+    #mainav form select {
+      width: 100%;
+      padding: 5px;
+      border: none;
+    }
+
+    #mainav form select option {
+      margin: 5px;
+      padding: 0;
+      border: none;
+    }
+
+    #backtotop {
+      z-index: 999;
+      display: inline-block;
+      position: fixed;
+      visibility: hidden;
+      bottom: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      font-size: 16px;
+      text-align: center;
+      opacity: .2;
+    }
+
+    #backtotop i {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: inherit;
+    }
+
+    body {
+      color: #7F7F7F;
+      background-color: #252525;
+    }
+
+    a {
+      color: #D01818;
+    }
+
+    hr,
+    .borderedbox {
+      border-color: #D7D7D7;
+    }
+
+    .overlay {
+      color: #FFFFFF;
+      background-color: inherit;
+    }
+
+    .overlay::after {
+      color: inherit;
+      background-color: rgba(0, 0, 0, .55);
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeNpiYGBgePz//38GRhABAgABBgBFTAbfCBNE2AAAAABJRU5ErkJggg==");
+    }
+
+    .btn,
+    .btn.inverse:hover {
+      color: #FFFFFF;
+      background-color: #D01818;
+      border-color: #D01818;
+    }
+
+    .btn:hover,
+    .btn.inverse {
+      color: inherit;
+      background-color: transparent;
+      border-color: inherit;
+    }
+
+    .row0,
+    .row0 a {
+      color: #7F7F7F;
+    }
+
+    .row0 {
+      border-color: #D01818;
+    }
+
+    .row1 {
+      color: #FFFFFF;
+      background-color: rgba(37, 37, 37, .5);
+    }
+
+    .row2 {
+      color: #141414;
+      background-color: #F3F3F3;
+    }
+
+    .row3 {
+      color: #141414;
+      background-color: #FFFFFF;
+    }
+
+    .row4 {
+      color: #7F7F7F;
+      background-color: #010101;
+    }
+
+    .row5,
+    .row5 a {
+      color: #7F7F7F;
+      background-color: #252525;
+    }
+
+    #topbar ul li {
+      border-color: rgba(255, 255, 255, .2);
+    }
+
+    #topbar div:first-of-type li:first-child a {
+      color: #D01818;
+    }
+
+    #header #logo h1 a {
+      color: inherit;
+      background-color: inherit;
+    }
+
+    .cta article i {
+      color: rgba(0, 0, 0, .2);
+    }
+
+    .services article * {
+      color: #FFFFFF;
+    }
+
+    #footer .heading {
+      color: #FFFFFF;
+    }
+
+    #footer hr,
+    #footer .borderedbox,
+    #footer .linklist li {
+      border-color: rgba(255, 255, 255, .2);
+    }
+
+    #mainav form select {
+      color: #FFFFFF;
+      background-color: #141414;
+    }
+
+    #backtotop {
+      color: #FFFFFF;
+      background-color: #D01818;
+    }
+
+    @media screen and (max-width:900px) {
       .hoc {
-        display: block;
-        margin: 0 auto;
+        max-width: 90%;
       }
 
-      address,
-      article,
-      aside,
-      figcaption,
-      figure,
-      footer,
-      header,
-      main,
-      nav,
-      section {
-        display: block;
-        margin: 0;
-        padding: 0;
+      #header {
+        padding: 30px 0;
       }
-
-      .one_half,
-      .one_third,
-      .two_third,
-      .one_quarter,
-      .two_quarter,
-      .three_quarter {
-        display: inline-block;
-        float: left;
-        margin: 0 0 0 3.06748466257669%;
-        list-style: none;
-      }
-
-      .first {
-        margin-left: 0;
-        clear: left;
-      }
-
-      .one_third {
-        width: 31.28834355828221%;
-      }
-
-      .one_half,
-      .two_quarter {
-        width: 48.46625766871166%;
-      }
-
-      .btmspace-30 {
-        margin-bottom: 30px;
-      }
-
-      .btmspace-50 {
-        margin-bottom: 50px;
-      }
-
-      .inspace-10 {
-        padding: 10px;
-      }
-
-      .row0 {
-        border-top: 1px solid;
-      }
-
-      #topbar {
-        padding: 15px 0;
-        font-size: .8rem;
-        text-transform: uppercase;
-      }
-
-      #topbar * {
-        margin: 0;
-      }
-
-      #topbar ul li {
-        display: inline-block;
-        margin-right: 10px;
-        padding-right: 15px;
-        border-right: 1px solid;
-      }
-
-      #topbar ul li:last-child {
-        margin-right: 0;
-        padding-right: 0;
-        border-right: none;
-      }
-
-      #topbar i {
-        margin: 0 5px 0 0;
-        line-height: normal;
-      }
-
       #header #logo {
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-
-      #header #logo * {
         margin: 0;
-        padding: 0;
-        line-height: 1;
-      }
-
-      #header #logo h1 {
-        font-size: 32px;
-        font-variant: small-caps;
-      }
-
-      #pageintro {
-        padding: 150px 0;
-      }
-
-      #pageintro article div {
-        margin-bottom: 80px;
-      }
-
-      #pageintro article div * {
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-      }
-
-      #pageintro article div .heading {
-        margin-bottom: 50px;
-        font-size: 40px;
-      }
-
-      #pageintro article div p:first-of-type {
-        margin-bottom: 20px;
-        font-size: 18px;
-      }
-
-      .container {
-        padding: 80px 0;
-      }
-
-      .sectiontitle {
-        display: block;
-        max-width: 55%;
-        margin: 0 auto 80px;
-        text-align: center;
-      }
-
-      .sectiontitle * {
-        margin: 0;
-      }
-
-      .cta article {
-        display: block;
-        position: relative;
-        padding: 0 0 0 95px;
-        line-height: normal;
-      }
-
-      .cta article * {
-        margin: 0;
-        padding: 0;
-      }
-
-      .cta article i {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 85px;
-        overflow: hidden;
-        line-height: 1;
-        font-size: 65px;
-      }
-
-      .cta article .heading {
-        margin-bottom: 10px;
-      }
-
-      .services article {
-        display: block;
-        padding: 30px;
-        padding-top: 150px;
-      }
-
-      .services article * {
-        margin: 0;
-        padding: 0;
-      }
-
-      .services article .heading {
-        margin-bottom: 10px;
-      }
-
-      #footer {
-        padding: 80px 0;
-      }
-
-      #footer .heading {
-        margin-bottom: 50px;
-        font-size: 1.2rem;
-      }
-
-      #footer .linklist li {
-        display: block;
-        margin-bottom: 15px;
-        padding: 0 0 15px 0;
-        border-bottom: 1px solid;
-      }
-
-      #footer .linklist li:last-child {
-        margin: 0;
-        padding: 0;
-        border: none;
-      }
-
-      #footer .linklist li::before,
-      #footer .linklist li::after {
-        display: table;
-        content: "";
-      }
-
-      #footer .linklist li,
-      #footer .linklist li::after {
-        clear: both;
-      }
-
-      #footer .contact.linklist li,
-      #footer .contact.linklist li:last-child {
-        position: relative;
-        padding-left: 40px;
-      }
-
-      #footer .contact li * {
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-      }
-
-      #footer .contact li i {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 30px;
-        font-size: 16px;
-        text-align: center;
-      }
-
-      #copyright {
-        padding: 20px 0;
-      }
-
-      #copyright * {
-        margin: 0;
-        padding: 0;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition: all .3s ease-in-out;
-      }
-
-      #mainav form * {
-        transition: none !important;
-      }
-
-      nav ul,
-      nav ol {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      #mainav,
-      #breadcrumb,
-      .sidebar nav {
-        line-height: normal;
-      }
-
-      #mainav ul.clear {
-        margin-top: 3px;
       }
 
       #mainav ul {
-        text-transform: uppercase;
-      }
-
-      #mainav form {
         display: none;
-        margin: 0;
-        padding: 0;
       }
-
-      #mainav form select,
-      #mainav form select option {
+      #mainav form {
         display: block;
-        cursor: pointer;
-        outline: none;
+        margin-top: 5px;
       }
 
-      #mainav form select {
-        width: 100%;
-        padding: 5px;
-        border: none;
+      #copyright p:first-of-type {
+        margin-bottom: 10px;
       }
+    }
+  </style>
 
-      #mainav form select option {
-        margin: 5px;
-        padding: 0;
-        border: none;
-      }
+</head>
 
-      #backtotop {
-        z-index: 999;
-        display: inline-block;
-        position: fixed;
-        visibility: hidden;
-        bottom: 20px;
-        right: 20px;
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        font-size: 16px;
-        text-align: center;
-        opacity: .2;
-      }
-
-      #backtotop i {
-        display: block;
-        width: 100%;
-        height: 100%;
-        line-height: inherit;
-      }
-
-      body {
-        color: #7F7F7F;
-        background-color: #252525;
-      }
-
-      a {
-        color: #D01818;
-      }
-
-      hr,
-      .borderedbox {
-        border-color: #D7D7D7;
-      }
-
-      .overlay {
-        color: #FFFFFF;
-        background-color: inherit;
-      }
-
-      .overlay::after {
-        color: inherit;
-        background-color: rgba(0, 0, 0, .55);
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeNpiYGBgePz//38GRhABAgABBgBFTAbfCBNE2AAAAABJRU5ErkJggg==");
-      }
-
-      .btn,
-      .btn.inverse:hover {
-        color: #FFFFFF;
-        background-color: #D01818;
-        border-color: #D01818;
-      }
-
-      .btn:hover,
-      .btn.inverse {
-        color: inherit;
-        background-color: transparent;
-        border-color: inherit;
-      }
-
-      .row0,
-      .row0 a {
-        color: #7F7F7F;
-      }
-
-      .row0 {
-        border-color: #D01818;
-      }
-
-      .row1 {
-        color: #FFFFFF;
-        background-color: rgba(37, 37, 37, .5);
-      }
-
-      .row2 {
-        color: #141414;
-        background-color: #F3F3F3;
-      }
-
-      .row3 {
-        color: #141414;
-        background-color: #FFFFFF;
-      }
-
-      .row4 {
-        color: #7F7F7F;
-        background-color: #010101;
-      }
-
-      .row5,
-      .row5 a {
-        color: #7F7F7F;
-        background-color: #252525;
-      }
-
-      #topbar ul li {
-        border-color: rgba(255, 255, 255, .2);
-      }
-
-      #topbar div:first-of-type li:first-child a {
-        color: #D01818;
-      }
-
-      #header #logo h1 a {
-        color: inherit;
-        background-color: inherit;
-      }
-
-      .cta article i {
-        color: rgba(0, 0, 0, .2);
-      }
-
-      .services article * {
-        color: #FFFFFF;
-      }
-
-      #footer .heading {
-        color: #FFFFFF;
-      }
-
-      #footer hr,
-      #footer .borderedbox,
-      #footer .linklist li {
-        border-color: rgba(255, 255, 255, .2);
-      }
-
-      #mainav form select {
-        color: #FFFFFF;
-        background-color: #141414;
-      }
-
-      #backtotop {
-        color: #FFFFFF;
-        background-color: #D01818;
-      }
-
-      @media screen and (max-width:900px) {
-        .hoc {
-          max-width: 90%;
-        }
-
-        #header {
-          padding: 30px 0;
-        }
-        #header #logo {
-          margin: 0;
-        }
-
-        #mainav ul {
-          display: none;
-        }
-        #mainav form {
-          display: block;
-          margin-top: 5px;
-        }
-
-        #copyright p:first-of-type {
-          margin-bottom: 10px;
-        }
-      }
-    </style>
-
-  </head>
-
-  <body id="top">
-    <div class="bgded overlay"
-         style="background-image:url('webp/artistic-2063_1920.webp');">
-      <div class="wrapper row0">
-        <div id="topbar"
-             class="hoc clear">
-          <div class="fl_left">
-            <ul class="nospace">
-              <li>
-                <a href="#">
-                  <i class="fa fa-lg fa-home"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#sobre">Sobre</a>
-              </li>
-              <li>
-                <a href="#servicos">Serviços</a>
-              </li>
-              <li>
-                <a href="#footer">Contato</a>
-              </li>
-            </ul>
-          </div>
-          <div class="fl_right">
-            <ul class="nospace">
-              <li>
-                <i class="fa fa-phone"></i> (31) 3376-3247</li>
-              <li>
-                <i class="fa fa-envelope-o"></i> papelariashalon@hotmail.com</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="wrapper row1">
-        <header id="header"
-                class="hoc clear">
-          <div id="logo"
-               class="fl_left">
-            <h1>
-              <a href="index.html">
-                <img src="webp/logo3.webp"
-                     style="height: 100px;"
-                     alt="Papelaria Shalon">
-              </a>
-            </h1>
-          </div>
-          <nav id="mainav"
-               class="fl_right">
-            <ul class="clear">
-              <li class="active">
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="#sobre">Sobre</a>
-              </li>
-              <li>
-                <a href="#servicos">Serviços</a>
-              </li>
-              <li>
-                <a href="#footer">Contato</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-      <div class="wrapper">
-        <div id="pageintro"
-             class="hoc clear">
-          <article>
-            <div>
-              <p class="heading">Papelaria Shalon João Pinheiro</p>
-              <h2 class="heading">A maior variedade de serviços do bairro</h2>
-              <p>Desde 2000 temos compromisso com o bom atendimento e variedade de serviços com preços acessíveis. Aqui você
-                compra muito, gasta pouco e ainda sobra troco.</p>
-            </div>
-            <footer>
-              <ul class="nospace inline pushright">
-                <li>
-                  <a class="btn inverse"
-                     href="#sobre">Saiba Mais</a>
-                </li>
-                <li>
-                  <a class="btn"
-                     href="#servicos">Serviços</a>
-                </li>
-              </ul>
-            </footer>
-          </article>
-        </div>
-      </div>
-    </div>
-    <div class="wrapper row3">
-      <main class="hoc container clear"
-            id="sobre">
-        <div class="sectiontitle">
-          <h6 class="heading">Nossa história</h6>
-          <p>Trajetória da Papelaria Shalon</p>
-        </div>
-        <div class="group">
-          <div class="one_half first">
-            <p>A Papelaria Shalon foi fundada em 2000. E desde então tem sido gerenciada pelos membros da mesma família.</p>
-            <p class="btmspace-50">Com o passar do tempo foram incluídos diversos serviços e produtos até que finalmente em 2017 entramos um pouco
-              atrasados para a Era digital. Oferecendo serviços online com a mesma agilidade e prestreza dispensadas no nosso
-              atendimento pessoal.</p>
-            <ul class="nospace group">
-              <li class="one_half first">
-                <article>
-                  <a href="#">
-                    <i class="btmspace-30 fa fa-4x fa-group"></i>
-                  </a>
-                  <h6 class="heading font-x1">Atendimento</h6>
-                  <p>Sempre prezamos pelo atendimento diferenciado. Promovendo um ambiente saudável e familiar para nossos clientes.</p>
-                </article>
-              </li>
-              <li class="one_half">
-                <article>
-                  <a href="#">
-                    <i class="btmspace-30 fa fa-4x fa-map-marker"></i>
-                  </a>
-                  <h6 class="heading font-x1">Localização</h6>
-                  <p>Nossa localização privilegiada provê facilidade de acesso para nossos clientes em umas das ruas mais comerciais
-                    do bairro João Pinheiro.</p>
-                </article>
-              </li>
-            </ul>
-          </div>
-          <div class="one_half">
-            <img class="inspace-10 borderedbox"
-                 srcLazy="webp/DSC01776.webp"
-                 alt="Produtos">
-          </div>
-        </div>
-        <div class="clear"></div>
-      </main>
-    </div>
-    <div class="wrapper row2">
-      <div class="hoc container clear"
-           id="servicos">
-        <ul class="nospace group cta">
-          <li class="one_third first">
-            <article>
-              <i class="fa fa-print"></i>
-              <h6 class="heading font-x1">
-                <a href="#">Xeros e impressões</a>
-              </h6>
-              <p>Xerox a partir de R$ 0,20 e impressões a partir de R$ 0,50</p>
-            </article>
-          </li>
-          <li class="one_third">
-            <article>
-              <i class="fa fa-camera"></i>
-              <h6 class="heading font-x1">
-                <a href="#">Fotos 3x4 e Revelações</a>
-              </h6>
-              <p>Fotos 3x4 R$ 10,00 com 12 fotos e revelações 10x15 R$ 1,20 a unidade.</p>
-            </article>
-          </li>
-          <li class="one_third">
-            <article>
-              <i class="fa fa-pencil"></i>
-              <h6 class="heading font-x1">
-                <a href="#">Material Escolar e Escritório</a>
-              </h6>
-              <p>Grande varidade de produtos de material escolar e materiais de escritório. E muito mais...</p>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="wrapper row3">
-      <div class="hoc container clear">
-        <div class="sectiontitle">
-          <h6 class="heading">Produtos e Serviços</h6>
-          <p>Veja alguns dos nossos produtos e serviços</p>
-        </div>
-        <ul class="nospace group services">
-          <li class="one_third first btmspace-30">
-            <article class="bgded overlay"
-                     styleLazy="background-image:url('webp/school-supplies-2690530_1920.webp');">
-              <h6 class="heading font-x1">
-                <a href="#">Material Escolar</a>
-              </h6>
-              <p>Variedade de produtos escolares das mais variadas marcas, cores e modelos.</p>
-            </article>
-          </li>
-          <li class="one_third btmspace-30">
-            <article class="bgded overlay"
-                     styleLazy="background-image:url('webp/calculator-178127_1920.webp');">
-              <h6 class="heading font-x1">
-                <a href="#">Material de Escritório</a>
-              </h6>
-              <p>Fomulários Gráficos, canetas, calculadoras, grampeadores, clips, grampos, pastas e muito mais.</p>
-            </article>
-          </li>
-          <li class="one_third btmspace-30">
-            <article class="bgded overlay"
-                     styleLazy="background-image:url('webp/camera-514992_1920.webp');">
-              <h6 class="heading font-x1">
-                <a href="#">Revelações de Fotos</a>
-              </h6>
-              <p>Revelação de Fotos 10x15 com qualidade digital pronta em apenas alguns minutos.</p>
-            </article>
-          </li>
-          <li class="one_third first">
-            <article class="bgded overlay"
-                     styleLazy="background-image:url('webp/DSC01772.webp');">
-              <h6 class="heading font-x1">
-                <a href="#">Brinquedos</a>
-              </h6>
-              <p>Bonecas, carrinhos, bolas, hand spinners, pipas, brinquedos pedagógicos e mais...</p>
-            </article>
-          </li>
-          <li class="one_third">
-            <article class="bgded overlay"
-                     styleLazy="background-image:url('webp/gift-553143_1920.webp');">
-              <h6 class="heading font-x1">
-                <a href="#">Presentes</a>
-              </h6>
-              <p>Relógios, albuns fotográficos, porta retratos, caixas de música, pelúcias e mais...</p>
-            </article>
-          </li>
-          <li class="one_third">
-            <article class="bgded overlay"
-                     styleLazy="background-image:url('webp/photographer-424622_1920.webp');">
-              <h6 class="heading font-x1">
-                <a href="#">Fotos 3x4</a>
-              </h6>
-              <p>Fotos 3x4 tiradas na hora e entregues em menos de 15 minutos com qualidade digital.</p>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="wrapper bgded overlay"
-         styleLazy="background-image:url('webp/email-824310_1920.webp');">
-      <article class="hoc container clear center">
-        <div class="sectiontitle"
-             style="margin-bottom:30px;">
-          <h6 class="heading">Papelaria Shalon</h6>
-          <p>papelariashalon@hotmail.com / papelariashalon@gmail.com</p>
-        </div>
-        <p>
-          <a class="btn medium"
-             href="#footer">Contato</a>
-        </p>
-      </article>
-    </div>
-    <div class="wrapper row3">
-      <section class="hoc container clear">
-        <div class="sectiontitle">
-          <h6 class="heading">Promoções</h6>
-          <p>Confira algumas de nossas promoções</p>
-        </div>
-        <div class="group">
-          <article class="one_third first">
-            <a href="#">
-              <img class="btmspace-30"
-                   srcLazy="webp/printer-2178754_1920.webp"
-                   alt="">
-            </a>
-            <h3 class="heading">Xerox</h3>
-            <ul>
-              <li>Menos de 50 cópias R$ 0,20</li>
-              <li>De 50 à 100 cópias R$ 0,15</li>
-              <li>Acima de 100 cópias R$ 0,12</li>
-            </ul>
-          </article>
-          <article class="one_third">
-            <a href="#">
-              <img class="btmspace-30"
-                   srcLazy="webp/printer-159612_1280.webp"
-                   alt="">
-            </a>
-            <h3 class="heading">Impressões</h3>
-            <ul>
-              <li>Preto e Branco até 10 un R$ 0,50</li>
-              <li>Preto e Branco acima de 10 R$ 0,30</li>
-              <li>Colorido até 10 un R$ 1,00</li>
-              <li>Colorido acima de 10 un R$ 0,75</li>
-            </ul>
-          </article>
-          <article class="one_third">
-            <a href="#">
-              <img class="btmspace-30"
-                   srcLazy="webp/photographer-424622_1920.webp"
-                   alt="">
-            </a>
-            <h3 class="heading">Fotos 3x4</h3>
-            <p>R$ 10,00 com 12 fotos</p>
-          </article>
-        </div>
-      </section>
-    </div>
-    <div class="wrapper row4">
-      <footer id="footer"
-              class="hoc clear">
-        <div class="one_half first">
-          <h6 class="heading">Informações de Contato</h6>
-          <p class="btmspace-30">Endereço Comercial</p>
-          <ul class="nospace linklist contact">
+<body id="top">
+  <div class="bgded overlay"
+       style="background-image:url('webp/artistic-2063_1920.webp');">
+    <div class="wrapper row0">
+      <div id="topbar"
+           class="hoc clear">
+        <div class="fl_left">
+          <ul class="nospace">
             <li>
-              <i class="fa fa-map-marker"></i>
-              <address>
-                Rua Nogueira da Gama, 138 - BH - MG - 30530-100
-              </address>
+              <a href="#">
+                <i class="fa fa-lg fa-home"></i>
+              </a>
             </li>
+            <li>
+              <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+              <a href="#servicos">Serviços</a>
+            </li>
+            <li>
+              <a href="#footer">Contato</a>
+            </li>
+          </ul>
+        </div>
+        <div class="fl_right">
+          <ul class="nospace">
             <li>
               <i class="fa fa-phone"></i> (31) 3376-3247</li>
             <li>
-              <i class="fa fa-envelope-o"></i> papelariashalon@hotmail.com / papelariashalon@gmail.com</li>
+              <i class="fa fa-envelope-o"></i> papelariashalon@hotmail.com</li>
           </ul>
         </div>
-      </footer>
-    </div>
-    <div class="wrapper row5">
-      <div id="copyright"
-           class="hoc clear">
-        <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved -
-          <a href="#">papelariashalon.com</a>
-        </p>
       </div>
     </div>
-    <a id="backtotop"
-       href="#top">
-      <i class="fa fa-chevron-up"></i>
-    </a>
+    <div class="wrapper row1">
+      <header id="header"
+              class="hoc clear">
+        <div id="logo"
+             class="fl_left">
+          <h1>
+            <a href="index.html">
+              <img src="webp/logo3.webp"
+                   style="height: 100px;"
+                   alt="Papelaria Shalon">
+            </a>
+          </h1>
+        </div>
+        <nav id="mainav"
+             class="fl_right">
+          <ul class="clear">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+              <a href="#servicos">Serviços</a>
+            </li>
+            <li>
+              <a href="#footer">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="wrapper">
+      <div id="pageintro"
+           class="hoc clear">
+        <article>
+          <div>
+            <p class="heading">Papelaria Shalon João Pinheiro</p>
+            <h2 class="heading">A maior variedade de serviços do bairro</h2>
+            <p>Desde 2000 temos compromisso com o bom atendimento e variedade de serviços com preços acessíveis. Aqui você
+              compra muito, gasta pouco e ainda sobra troco.</p>
+          </div>
+          <footer>
+            <ul class="nospace inline pushright">
+              <li>
+                <a class="btn inverse"
+                   href="#sobre">Saiba Mais</a>
+              </li>
+              <li>
+                <a class="btn"
+                   href="#servicos">Serviços</a>
+              </li>
+            </ul>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper row3">
+    <main class="hoc container clear"
+          id="sobre">
+      <div class="sectiontitle">
+        <h6 class="heading">Nossa história</h6>
+        <p>Trajetória da Papelaria Shalon</p>
+      </div>
+      <div class="group">
+        <div class="one_half first">
+          <p>A Papelaria Shalon foi fundada em 2000. E desde então tem sido gerenciada pelos membros da mesma família.</p>
+          <p class="btmspace-50">Com o passar do tempo foram incluídos diversos serviços e produtos até que finalmente em
+            2017 entramos um pouco atrasados para a Era digital. Oferecendo serviços online com a mesma agilidade e prestreza
+            dispensadas no nosso atendimento pessoal.</p>
+          <ul class="nospace group">
+            <li class="one_half first">
+              <article>
+                <a href="#">
+                  <i class="btmspace-30 fa fa-4x fa-group"></i>
+                </a>
+                <h6 class="heading font-x1">Atendimento</h6>
+                <p>Sempre prezamos pelo atendimento diferenciado. Promovendo um ambiente saudável e familiar para nossos
+                  clientes.
+                </p>
+              </article>
+            </li>
+            <li class="one_half">
+              <article>
+                <a href="#">
+                  <i class="btmspace-30 fa fa-4x fa-map-marker"></i>
+                </a>
+                <h6 class="heading font-x1">Localização</h6>
+                <p>Nossa localização privilegiada provê facilidade de acesso para nossos clientes em umas das ruas mais comerciais
+                  do bairro João Pinheiro.</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="one_half">
+          <img class="inspace-10 borderedbox"
+               srcLazy="webp/DSC01776.webp"
+               alt="Produtos">
+        </div>
+      </div>
+      <div class="clear"></div>
+    </main>
+  </div>
+  <div class="wrapper row2">
+    <div class="hoc container clear"
+         id="servicos">
+      <ul class="nospace group cta">
+        <li class="one_third first">
+          <article>
+            <i class="fa fa-print"></i>
+            <h6 class="heading font-x1">
+              <a href="#">Xeros e impressões</a>
+            </h6>
+            <p>Xerox a partir de R$ 0,20 e impressões a partir de R$ 0,50</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <i class="fa fa-camera"></i>
+            <h6 class="heading font-x1">
+              <a href="#">Fotos 3x4 e Revelações</a>
+            </h6>
+            <p>Fotos 3x4 R$ 10,00 com 12 fotos e revelações 10x15 R$ 1,20 a unidade.</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <i class="fa fa-pencil"></i>
+            <h6 class="heading font-x1">
+              <a href="#">Material Escolar e Escritório</a>
+            </h6>
+            <p>Grande varidade de produtos de material escolar e materiais de escritório. E muito mais...</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrapper row3">
+    <div class="hoc container clear">
+      <div class="sectiontitle">
+        <h6 class="heading">Produtos e Serviços</h6>
+        <p>Veja alguns dos nossos produtos e serviços</p>
+      </div>
+      <ul class="nospace group services">
+        <li class="one_third first btmspace-30">
+          <article class="bgded overlay"
+                   styleLazy="background-image:url('webp/school-supplies-2690530_1920.webp');">
+            <h6 class="heading font-x1">
+              <a href="#">Material Escolar</a>
+            </h6>
+            <p>Variedade de produtos escolares das mais variadas marcas, cores e modelos.</p>
+          </article>
+        </li>
+        <li class="one_third btmspace-30">
+          <article class="bgded overlay"
+                   styleLazy="background-image:url('webp/calculator-178127_1920.webp');">
+            <h6 class="heading font-x1">
+              <a href="#">Material de Escritório</a>
+            </h6>
+            <p>Fomulários Gráficos, canetas, calculadoras, grampeadores, clips, grampos, pastas e muito mais.</p>
+          </article>
+        </li>
+        <li class="one_third btmspace-30">
+          <article class="bgded overlay"
+                   styleLazy="background-image:url('webp/camera-514992_1920.webp');">
+            <h6 class="heading font-x1">
+              <a href="#">Revelações de Fotos</a>
+            </h6>
+            <p>Revelação de Fotos 10x15 com qualidade digital pronta em apenas alguns minutos.</p>
+          </article>
+        </li>
+        <li class="one_third first">
+          <article class="bgded overlay"
+                   styleLazy="background-image:url('webp/DSC01772.webp');">
+            <h6 class="heading font-x1">
+              <a href="#">Brinquedos</a>
+            </h6>
+            <p>Bonecas, carrinhos, bolas, hand spinners, pipas, brinquedos pedagógicos e mais...</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article class="bgded overlay"
+                   styleLazy="background-image:url('webp/gift-553143_1920.webp');">
+            <h6 class="heading font-x1">
+              <a href="#">Presentes</a>
+            </h6>
+            <p>Relógios, albuns fotográficos, porta retratos, caixas de música, pelúcias e mais...</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article class="bgded overlay"
+                   styleLazy="background-image:url('webp/photographer-424622_1920.webp');">
+            <h6 class="heading font-x1">
+              <a href="#">Fotos 3x4</a>
+            </h6>
+            <p>Fotos 3x4 tiradas na hora e entregues em menos de 15 minutos com qualidade digital.</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrapper bgded overlay"
+       styleLazy="background-image:url('webp/email-824310_1920.webp');">
+    <article class="hoc container clear center">
+      <div class="sectiontitle"
+           style="margin-bottom:30px;">
+        <h6 class="heading">Papelaria Shalon</h6>
+        <p>papelariashalon@hotmail.com / papelariashalon@gmail.com</p>
+      </div>
+      <p>
+        <a class="btn medium"
+           href="#footer">Contato</a>
+      </p>
+    </article>
+  </div>
+  <div class="wrapper row3">
+    <section class="hoc container clear">
+      <div class="sectiontitle">
+        <h6 class="heading">Promoções</h6>
+        <p>Confira algumas de nossas promoções</p>
+      </div>
+      <div class="group">
+        <article class="one_third first">
+          <a href="#">
+            <img class="btmspace-30"
+                 srcLazy="webp/printer-2178754_1920.webp"
+                 alt="">
+          </a>
+          <h3 class="heading">Xerox</h3>
+          <ul>
+            <li>Menos de 50 cópias R$ 0,20</li>
+            <li>De 50 à 100 cópias R$ 0,15</li>
+            <li>Acima de 100 cópias R$ 0,12</li>
+          </ul>
+        </article>
+        <article class="one_third">
+          <a href="#">
+            <img class="btmspace-30"
+                 srcLazy="webp/printer-159612_1280.webp"
+                 alt="">
+          </a>
+          <h3 class="heading">Impressões</h3>
+          <ul>
+            <li>Preto e Branco até 10 un R$ 0,50</li>
+            <li>Preto e Branco acima de 10 R$ 0,30</li>
+            <li>Colorido até 10 un R$ 1,00</li>
+            <li>Colorido acima de 10 un R$ 0,75</li>
+          </ul>
+        </article>
+        <article class="one_third">
+          <a href="#">
+            <img class="btmspace-30"
+                 srcLazy="webp/photographer-424622_1920.webp"
+                 alt="">
+          </a>
+          <h3 class="heading">Fotos 3x4</h3>
+          <p>R$ 10,00 com 12 fotos</p>
+        </article>
+      </div>
+    </section>
+  </div>
+  <div class="wrapper row4">
+    <footer id="footer"
+            class="hoc clear">
+      <div class="one_half first">
+        <h6 class="heading">Informações de Contato</h6>
+        <p class="btmspace-30">Endereço Comercial</p>
+        <ul class="nospace linklist contact">
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <address>
+              Rua Nogueira da Gama, 138 - BH - MG - 30530-100
+            </address>
+          </li>
+          <li>
+            <i class="fa fa-phone"></i> (31) 3376-3247</li>
+          <li>
+            <i class="fa fa-envelope-o"></i> papelariashalon@hotmail.com / papelariashalon@gmail.com</li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <div class="wrapper row5">
+    <div id="copyright"
+         class="hoc clear">
+      <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved -
+        <a href="#">papelariashalon.com</a>
+      </p>
+    </div>
+  </div>
+  <a id="backtotop"
+     href="#top">
+    <i class="fa fa-chevron-up"></i>
+  </a>
 
-    <script defer
-            src="js/jquery.min.js"></script>
-    <script defer
-            src="js/jquery.backtotop.js"></script>
-    <script defer
-            src="js/jquery.mobilemenu.js"></script>
-    <script defer
-            src="js/images.js"></script>
-  </body>
+  <script defer
+          src="js/jquery.min.js"></script>
+  <script defer
+          src="js/jquery.backtotop.js"></script>
+  <script defer
+          src="js/jquery.mobilemenu.js"></script>
+  <script defer
+          src="js/images.js"></script>
+</body>
 
 </html>
